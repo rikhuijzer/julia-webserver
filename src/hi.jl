@@ -1,9 +1,11 @@
+prefix_zero(x) = x < 10 ? "0$x" : string(x)
+
 function now_pretty()
     day = today()
     dt = now()
-    h = hour(dt)
-    m = minute(dt)
-    s = second(dt)
+    h = prefix_zero(hour(dt))
+    m = prefix_zero(minute(dt))
+    s = prefix_zero(second(dt))
     return "$day $h:$m:$s"
 end
 

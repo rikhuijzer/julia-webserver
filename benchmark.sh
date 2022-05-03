@@ -3,6 +3,8 @@
 # Credits for this script go to Tomas Fagerbekk
 # https://notes.webutvikling.org/quick-http-benchmarking-with-curl/
 
+# Note that this script doesn't run the requests concurrently.
+
 iterations=$1
 url=$2
 echo "Running $iterations iterations for curl $url"

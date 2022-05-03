@@ -1,14 +1,3 @@
-prefix_zero(x) = x < 10 ? "0$x" : string(x)
-
-function now_pretty()
-    day = today()
-    dt = now()
-    h = prefix_zero(hour(dt))
-    m = prefix_zero(minute(dt))
-    s = prefix_zero(second(dt))
-    return "$day $h:$m:$s"
-end
-
 hi() = """
     <!doctype html>
     <html>
@@ -52,7 +41,7 @@ hi() = """
     <div>
         <h1>Hi</h1>
         <p>This is a response from a <a href="https://julialang.org">Julia</a>-powered webserver.</p>
-        <p>On the server, it is currently $(now_pretty()).</p>
+        <p>On the server, it is currently $(now()).</p>
 
         <p>
             <a href="https://github.com/rikhuijzer/julia-webserver">

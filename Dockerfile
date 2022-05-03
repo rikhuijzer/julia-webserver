@@ -21,7 +21,7 @@ RUN set -eux; \
         llvm-dev clang g++ \
         make
 
-# Copy the `Project.toml` and an empty `src/YSF.jl` module.
+# Copy the `Project.toml` and an empty `src/MyApp.jl` module.
 COPY Project.toml /app/
 RUN mkdir -p /app/src/; \
   echo 'module MyApp end' > /app/src/MyApp.jl ; \

@@ -18,6 +18,8 @@ hi() = """
         <meta charset="utf-8" />
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel=icon  href="https://julialang.org/assets/infra/julia.ico">
+
         <style type="text/css">
         body {
             background-color: #f0f0f2;

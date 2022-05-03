@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: hi
+    env: docker
+    numInstances: 1
+    healthCheckPath: /
+    envVars:
+      # Optional. This speeds up port detection.
+      - key: PORT
+        value: 8080

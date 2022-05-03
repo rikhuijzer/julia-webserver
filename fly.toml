@@ -1,0 +1,40 @@
+app = "myapp"
+
+kill_signal = "SIGKILL"
+kill_timeout = 300
+processes = []
+
+[env]
+
+[experimental]
+  allowed_public_ports = []
+  auto_rollback = true
+
+[[services]]
+  internal_port = 8080
+  processes = ["app"]
+  protocol = "tcp"
+  script_checks = []
+
+  [services.concurrency]
+    hard_limit = 120 # 25
+    soft_limit = 100 # 20
+    type = "connections"
+
+  [[services.ports]]
+    handlers = ["http"]
+    port = 80
+
+  [[services.ports]]
+    handlers = ["tls", "http"]
+    port = 443
+
+  [[services.http_checks]]
+    grace_period = "60s"
+    interval = "120s"
+    method = "get"
+    path = "/"
+    protocol = "http"
+    timeout = "10s"
+    tls_skip_verify = false
+    [services.http_checks.headers]

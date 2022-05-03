@@ -17,9 +17,14 @@ function get_home(req::Request)
     return Response(200, hi())
 end
 
+function get_ping(req::Request)
+    return Response(200, "pong")
+end
+
 function _router()
     r = HTTP.Router()
     HTTP.@register(r, "GET", "/", get_home)
+    HTTP.@register(r, "GET", "/ping", get_ping)
     return r
 end
 

@@ -10,8 +10,10 @@ using Sockets:
     Sockets,
     @ip_str
 
+include("hi.jl")
+
 function get_home(req::Request)
-    return Response(200, "hi")
+    return Response(200, hi)
 end
 
 function _router()

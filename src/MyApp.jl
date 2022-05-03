@@ -2,6 +2,7 @@ module MyApp
 
 export serve
 
+using Dates
 using HTTP:
     HTTP,
     Response,
@@ -13,7 +14,7 @@ using Sockets:
 include("hi.jl")
 
 function get_home(req::Request)
-    return Response(200, hi)
+    return Response(200, hi())
 end
 
 function _router()

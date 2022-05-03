@@ -1,4 +1,13 @@
-hi = raw"""
+function now_pretty()
+    day = today()
+    dt = now()
+    h = hour(dt)
+    m = minute(dt)
+    s = second(dt)
+    return "$day $h:$m:$s"
+end
+
+hi() = """
     <!doctype html>
     <html>
     <head>
@@ -39,6 +48,7 @@ hi = raw"""
     <div>
         <h1>Hi</h1>
         <p>This is a response from a <a href="https://julialang.org">Julia</a>-powered webserver.</p>
+        <p>On the server, it is currently $(now_pretty()).</p>
 
         <p>
             <a href="https://github.com/rikhuijzer/julia-webserver">

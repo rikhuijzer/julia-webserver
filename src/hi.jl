@@ -11,7 +11,7 @@ hi() = """
     <!doctype html>
     <html>
     <head>
-        <title>Example Domain</title>
+        <title>Example Server</title>
 
         <meta charset="utf-8" />
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />

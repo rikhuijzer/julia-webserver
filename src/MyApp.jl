@@ -10,7 +10,6 @@ using HTTP:
 using Sockets:
     Sockets,
     @ip_str
-using TimeZones
 
 include("hi.jl")
 

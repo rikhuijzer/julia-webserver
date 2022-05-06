@@ -8,7 +8,6 @@ Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
 HTTP = "cd3eb016-35fb-5094-929b-558a96fad6f3"
 LibPQ = "194296ae-ab2e-5f79-8cd4-7183a0a5a0d1"
 Sockets = "6462fe0b-24de-5631-8697-dd941f90decc"
-TimeZones = "f269a46b-ccf7-5d73-abea-4c690281aa53"
 
 [compat]
 HTTP = "0.9.17"
